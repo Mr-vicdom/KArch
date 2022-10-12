@@ -18495,6 +18495,7 @@ a.blog-desc1:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
 }
 .section:nth-child(1){
   color: grey;
