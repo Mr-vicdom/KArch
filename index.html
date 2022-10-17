@@ -344,17 +344,34 @@
         <div class="container py-lg-5">
                 <div class="history-info position-relative">
                         <!--//video-->
-                        <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+                        <a href="#small-dialog" id="playbtn"  class="popup-with-zoom-anim play-view text-center pl-3">
                             <span class="video-play-icon">
                                 <span class="fa fa-play"></span>
                             </span>
                         </a>
                         <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                         <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                            <iframe src="assets\images\KSA Campus Tour-1080P.mp4" frameborder="0"
-                                allow="fullscreen" allowfullscreen></iframe>
+                            <div class="w3-container"
+        style="display: flex;align-items: center;min-height: 420px;height: 100%;border-radius: 10px;background-color: black;overflow: hidden;">
+        <video id="ksavid" style="width: 100%;" src="assets/images/KSA Campus Tour-1080P.mp4" controls />
+    </div>
                         </div>
+                        
                         <!--//video-->
+                        <script>
+                            const vid = document.getElementById('ksavid');
+                            const playbtn = document.getElementById('playbtn');
+                            playbtn.addEventListener('click', () => {
+                                vid.play();
+                                setTimeout(
+                                    () => {
+                                        const clsbtn = document.getElementsByClassName('mfp-close')[0];
+                                            clsbtn.addEventListener('click', () => {
+                                                vid.pause();
+                                            });
+                                    }, 1000);
+                            });
+                        </script>
                     </div>
             </div>
     </div>
