@@ -18472,15 +18472,8 @@ a.blog-desc1:hover {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Asap", sans-serif;
-}
-
 .section{
+
   min-height: 70vh;
   display: flex;
   justify-content: center;
@@ -18557,7 +18550,7 @@ a.blog-desc1:hover {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 900px){
